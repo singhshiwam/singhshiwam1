@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Shiwam Singh | Atmospheric Scientist | IIT Roorkee</title>
 <meta name="description" content="Shiwam Singh - PhD Researcher at IIT Roorkee specializing in boundary layer meteorology, surface layer parameterization in NWP models, and weather prediction over mountainous regions.">
 <meta name="author" content="Shiwam Singh">
@@ -11,228 +11,486 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-:root {
-  --bg:#030812;--surface:#06101f;--card:#081525;--card2:#0a1a2e;
-  --border:rgba(56,182,255,0.10);--border-hi:rgba(56,182,255,0.28);
-  --cyan:#38b6ff;--cyan-dim:rgba(56,182,255,0.15);--teal:#00e5c8;
-  --violet:#a855f7;--rose:#ff4e8e;--amber:#ffb700;--lime:#a3e635;
-  --text:#eef4ff;--text-mid:#8fb3d4;--text-dim:#4d7a9e;
-  --glow-cyan:0 0 40px rgba(56,182,255,0.25);--glow-teal:0 0 40px rgba(0,229,200,0.20);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 
-.bg-mesh{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse 70% 55% at 10% 5%,rgba(56,182,255,0.13) 0%,transparent 65%),
-    radial-gradient(ellipse 55% 45% at 92% 15%,rgba(168,85,247,0.10) 0%,transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 85%,rgba(0,229,200,0.09) 0%,transparent 60%),
-    radial-gradient(ellipse 80% 60% at 20% 95%,rgba(255,183,0,0.07) 0%,transparent 60%),
-    radial-gradient(ellipse 100% 100% at 50% 50%,#04101f 0%,#030812 100%);}
-.bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:linear-gradient(rgba(56,182,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(56,182,255,0.03) 1px,transparent 1px);
-  background-size:48px 48px;}
+:root {
+  --bg-deep: #020617;
+  --bg-surface: #0a0f2a;
+  --bg-card: #0f172f;
+  --bg-card-hover: #131c3c;
+  --border-glow: rgba(56, 189, 248, 0.25);
+  --cyan-live: #22d3ee;
+  --cyan-bright: #06b6d4;
+  --teal-mint: #2dd4bf;
+  --vibrant-pink: #f472b6;
+  --vibrant-purple: #c084fc;
+  --amber-glow: #fbbf24;
+  --lime-fresh: #a3e635;
+  --text-light: #f0f9ff;
+  --text-soft: #b9e2f0;
+  --text-dim: #7ca5c2;
+  --shadow-cyan: 0 20px 35px -12px rgba(34, 211, 238, 0.2);
+  --gradient-primary: linear-gradient(135deg, #22d3ee, #2dd4bf, #c084fc);
+  --gradient-card-edge: linear-gradient(145deg, rgba(34, 211, 238, 0.08), rgba(192, 132, 252, 0.05));
+}
 
-/* HERO */
-.hero{position:relative;z-index:1;width:100%;min-height:420px;display:flex;align-items:flex-end;overflow:hidden;}
-.hero-mountain{position:absolute;inset:0;
-  background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80');
-  background-size:cover;background-position:center 30%;opacity:0.28;
-  mask-image:linear-gradient(to bottom,black 0%,black 55%,transparent 100%);
-  -webkit-mask-image:linear-gradient(to bottom,black 0%,black 55%,transparent 100%);}
-.hero-tint{position:absolute;inset:0;background:linear-gradient(170deg,rgba(3,8,18,0.30) 0%,rgba(3,8,18,0.60) 50%,rgba(3,8,18,1.00) 100%);}
-.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
-.hero-orb-1{width:500px;height:500px;top:-120px;left:-80px;background:rgba(56,182,255,0.18);}
-.hero-orb-2{width:400px;height:400px;top:-60px;right:-60px;background:rgba(168,85,247,0.14);}
-.hero-orb-3{width:350px;height:350px;bottom:-50px;left:30%;background:rgba(0,229,200,0.10);}
-.hero-inner{position:relative;z-index:2;width:100%;padding:0 5vw 60px;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:flex-end;}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr;align-items:center;text-align:center;padding:40px 24px 48px;gap:24px;}.hero-contacts{margin:0 auto;}}
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+  position: relative;
+}
 
-.profile-wrap{width:150px;height:150px;border-radius:50%;padding:3px;
-  background:linear-gradient(135deg,var(--cyan),var(--teal),var(--violet));
-  box-shadow:0 0 50px rgba(56,182,255,0.35),0 0 100px rgba(56,182,255,0.15);flex-shrink:0;}
-.profile-wrap img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:var(--card);display:block;}
+/* animated mesh + aurora effect */
+.bg-aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 70% 60% at 30% 20%, rgba(34, 211, 238, 0.12), transparent 60%),
+              radial-gradient(ellipse 50% 50% at 85% 70%, rgba(192, 132, 252, 0.12), transparent 65%),
+              radial-gradient(ellipse 40% 40% at 15% 90%, rgba(45, 212, 191, 0.1), transparent 70%);
+  animation: auroraShift 20s infinite alternate;
+}
 
-.hero-label{font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
-.hero-label::before{content:'';display:inline-block;width:28px;height:2px;background:var(--cyan);border-radius:2px;}
-.hero-name{font-family:'Syne',sans-serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:800;line-height:0.95;letter-spacing:-0.03em;color:var(--text);}
-.hero-name .accent{background:linear-gradient(90deg,var(--cyan),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.hero-role{margin-top:14px;font-size:1.1rem;font-weight:400;color:var(--text-mid);display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-.hero-role i{color:var(--teal);}
-.badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
-.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 16px;border-radius:100px;font-size:0.8rem;font-weight:600;font-family:'Space Mono',monospace;border:1px solid;}
-.badge-cyan{border-color:rgba(56,182,255,0.4);color:var(--cyan);background:rgba(56,182,255,0.08);}
-.badge-teal{border-color:rgba(0,229,200,0.35);color:var(--teal);background:rgba(0,229,200,0.07);}
-.badge-violet{border-color:rgba(168,85,247,0.35);color:var(--violet);background:rgba(168,85,247,0.07);}
+@keyframes auroraShift {
+  0% { opacity: 0.6; transform: scale(1);}
+  100% { opacity: 1; transform: scale(1.02);}
+}
 
-.hero-contacts{background:rgba(6,16,32,0.75);border:1px solid var(--border-hi);border-radius:20px;padding:22px 26px;display:flex;flex-direction:column;gap:11px;min-width:280px;box-shadow:var(--glow-cyan);}
-.contact-row{display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-mid);text-decoration:none;transition:color 0.18s,transform 0.18s;white-space:nowrap;}
-.contact-row i{color:var(--amber);width:16px;text-align:center;flex-shrink:0;}
-.contact-row:hover{color:var(--text);transform:translateX(4px);}
+.bg-grid-modern {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: 
+    linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+  background-size: 55px 55px;
+  pointer-events: none;
+}
 
-/* WRAPPER */
-.wrapper{position:relative;z-index:1;width:100%;padding:0 5vw 80px;}
+/* scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #03071e; }
+::-webkit-scrollbar-thumb { background: var(--cyan-bright); border-radius: 10px; }
 
-/* STATS */
-.stat-row{display:flex;gap:0;margin-top:28px;background:var(--card2);border:1px solid var(--border-hi);border-radius:20px;overflow:hidden;box-shadow:var(--glow-cyan);}
-.stat-item{flex:1;padding:22px 20px;text-align:center;border-right:1px solid var(--border);}
-.stat-item:last-child{border-right:none;}
-.stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.stat-label{font-size:0.78rem;color:var(--text-dim);margin-top:4px;}
+/* hero section upgrade */
+.hero {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
 
-/* FOCUS BANNER */
-.focus-banner{margin-top:24px;padding:28px 36px;border-radius:20px;
-  background:linear-gradient(135deg,rgba(56,182,255,0.07) 0%,rgba(0,229,200,0.05) 50%,rgba(168,85,247,0.05) 100%);
-  border:1px solid rgba(56,182,255,0.20);border-left:5px solid var(--cyan);
-  display:flex;gap:22px;align-items:flex-start;}
-.focus-icon{font-size:2rem;color:var(--cyan);flex-shrink:0;margin-top:2px;}
-.focus-label{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:10px;}
-.focus-text{font-size:1rem;line-height:1.75;color:var(--text-mid);}
-.focus-text strong{color:var(--text);font-weight:600;}
+.hero-mountain-dynamic {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80');
+  background-size: cover;
+  background-position: center 28%;
+  opacity: 0.3;
+  mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  transform: scale(1.02);
+  filter: saturate(1.2) brightness(0.7);
+}
 
-/* TABS */
-.tab-nav{display:flex;flex-wrap:wrap;gap:8px;margin:36px 0 28px;padding-bottom:28px;border-bottom:1px solid var(--border);}
-.tab-btn{font-family:'Syne',sans-serif;font-size:0.88rem;font-weight:700;letter-spacing:0.3px;padding:10px 24px;border-radius:100px;border:1px solid var(--border);background:rgba(8,21,37,0.6);color:var(--text-dim);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.18s ease;}
-.tab-btn i{font-size:0.8rem;}
-.tab-btn:hover{background:var(--cyan-dim);color:var(--cyan);border-color:rgba(56,182,255,0.4);transform:translateY(-2px);box-shadow:0 6px 20px rgba(56,182,255,0.15);}
-.tab-btn.active{background:linear-gradient(135deg,rgba(56,182,255,0.25),rgba(0,229,200,0.15));color:var(--text);border-color:rgba(56,182,255,0.6);box-shadow:0 0 0 1px rgba(56,182,255,0.2),0 8px 24px rgba(56,182,255,0.2);transform:translateY(-2px);}
+.hero-tint-vibrant {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(2,6,23,0.5) 0%, rgba(2,6,23,0.75) 40%, rgba(2,6,23,0.95) 100%);
+}
 
-/* SECTIONS */
-.section{display:none;animation:fadeUp 0.22s ease-out;}
-.section.active{display:block;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+.hero-orb-animated {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.6;
+  animation: floatOrb 16s infinite alternate;
+}
 
-/* GRIDS */
-.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:22px;}
-.grid-1{display:grid;gap:22px;}
-@media(max-width:600px){.grid-2{grid-template-columns:1fr;}}
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1);}
+  100% { transform: translate(20px, -20px) scale(1.1);}
+}
 
-/* CARDS */
-.card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:30px 32px;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(56,182,255,0.4),transparent);opacity:0;transition:opacity 0.2s;}
-.card:hover{border-color:rgba(56,182,255,0.25);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.4),var(--glow-cyan);}
-.card:hover::before{opacity:1;}
-.card-teal:hover{border-color:rgba(0,229,200,0.25);box-shadow:0 16px 40px rgba(0,0,0,0.4),var(--glow-teal);}
-.card-teal::before{background:linear-gradient(90deg,transparent,rgba(0,229,200,0.4),transparent);}
-.card-amber:hover{border-color:rgba(255,183,0,0.25);box-shadow:0 16px 40px rgba(0,0,0,0.4),0 0 40px rgba(255,183,0,0.15);}
-.card-violet:hover{border-color:rgba(168,85,247,0.25);box-shadow:0 16px 40px rgba(0,0,0,0.4),0 0 40px rgba(168,85,247,0.15);}
-.card-title{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--cyan);margin-bottom:22px;display:flex;align-items:center;gap:10px;padding-bottom:14px;border-bottom:1px solid var(--border);}
-.card-title i{color:var(--amber);font-size:1rem;}
-.card-title.teal{color:var(--teal);}
-.card-title.violet{color:var(--violet);}
-.card-title.amber{color:var(--amber);}
+.hero-orb-cyan { width: 550px; height: 550px; top: -180px; left: -120px; background: rgba(34,211,238,0.2);}
+.hero-orb-purple { width: 480px; height: 480px; bottom: -100px; right: -80px; background: rgba(192,132,252,0.18); animation-delay: -3s;}
+.hero-orb-teal { width: 400px; height: 400px; top: 30%; left: 60%; background: rgba(45,212,191,0.12); animation-duration: 12s;}
 
-/* TIMELINE */
-.timeline{display:flex;flex-direction:column;gap:12px;}
-.tl-item{padding:16px 20px;background:rgba(4,12,24,0.6);border-radius:14px;border-left:3px solid var(--cyan);transition:border-color 0.18s,transform 0.18s,background 0.18s;}
-.tl-item:hover{border-left-color:var(--teal);transform:translateX(5px);background:rgba(56,182,255,0.05);}
-.tl-date{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-dim);margin-bottom:5px;}
-.tl-title{font-weight:600;font-size:1rem;color:var(--text);}
-.tl-sub{font-size:0.87rem;color:var(--text-mid);margin-top:3px;}
-.tl-desc{font-size:0.83rem;color:var(--text-dim);margin-top:7px;line-height:1.55;}
+.hero-inner {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  padding: 0 6vw 70px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 48px;
+  align-items: end;
+}
 
-/* PUBLICATIONS */
-.pub-list{counter-reset:pub;display:flex;flex-direction:column;gap:18px;}
-.pub-item{counter-increment:pub;background:rgba(4,12,24,0.6);border:1px solid var(--border);border-radius:16px;padding:22px 24px 22px 64px;position:relative;transition:border-color 0.2s,transform 0.18s,box-shadow 0.2s;}
-.pub-item::before{content:counter(pub);position:absolute;left:20px;top:22px;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--amber),#ff8c00);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:0.82rem;display:flex;align-items:center;justify-content:center;}
-.pub-item:hover{border-color:rgba(255,183,0,0.35);transform:translateX(5px);box-shadow:0 8px 24px rgba(0,0,0,0.3),0 0 30px rgba(255,183,0,0.10);}
-.pub-title{font-weight:600;font-size:1rem;color:var(--text);line-height:1.45;margin-bottom:8px;}
-.pub-authors{font-size:0.84rem;color:var(--text-dim);line-height:1.6;}
-.pub-authors .me{color:var(--cyan);font-weight:600;}
-.pub-journal{display:inline-block;margin-top:10px;font-size:0.82rem;font-style:italic;color:var(--amber);}
-.pub-doi{display:inline-block;margin-top:6px;font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--teal);text-decoration:none;transition:color 0.15s;}
-.pub-doi:hover{color:#fff;text-decoration:underline;}
+@media (max-width: 1000px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 30px; padding: 40px 24px 50px; align-items: center; }
+  .hero-contacts { margin: 0 auto; width: 100%; max-width: 380px; }
+  .badge-row { justify-content: center; }
+}
 
-/* CONFERENCES */
-.conf-list{counter-reset:conf;display:flex;flex-direction:column;gap:12px;}
-.conf-item{counter-increment:conf;padding:16px 20px 16px 56px;background:rgba(4,12,24,0.6);border:1px solid var(--border);border-radius:14px;position:relative;font-size:0.9rem;color:var(--text-mid);line-height:1.65;transition:border-color 0.18s,transform 0.15s;}
-.conf-item::before{content:counter(conf);position:absolute;left:14px;top:14px;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--teal));color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:0.75rem;display:flex;align-items:center;justify-content:center;}
-.conf-item:hover{border-color:rgba(56,182,255,0.3);transform:translateX(5px);background:rgba(56,182,255,0.04);}
-.conf-item em{color:var(--teal);font-style:italic;}
-.conf-item strong{color:var(--text);}
+.profile-ring {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--cyan-live), var(--teal-mint), var(--vibrant-purple));
+  box-shadow: 0 0 60px rgba(34,211,238,0.5);
+  transition: transform 0.3s ease;
+}
+.profile-ring:hover { transform: scale(1.02);}
+.profile-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #0f172f;
+  display: block;
+}
 
-/* AWARDS */
-.award-list{display:flex;flex-direction:column;gap:14px;}
-.award-item{padding:18px 22px;background:rgba(255,183,0,0.05);border-radius:16px;border:1px solid rgba(255,183,0,0.12);border-left:5px solid var(--amber);transition:background 0.2s,transform 0.15s,box-shadow 0.2s;}
-.award-item:hover{background:rgba(255,183,0,0.10);transform:translateX(5px);box-shadow:0 4px 20px rgba(255,183,0,0.12);}
-.award-name{font-family:'Syne',sans-serif;font-weight:700;color:var(--amber);font-size:1rem;margin-bottom:4px;}
-.award-body{font-size:0.88rem;color:var(--text-mid);}
-.award-meta{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--text-dim);margin-top:5px;}
+.hero-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(3.2rem, 6.5vw, 5.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  background: linear-gradient(to right, #ffffff, var(--cyan-live), var(--teal-mint));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(34,211,238,0.2);
+}
+.hero-role {
+  margin-top: 16px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-soft);
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.hero-role i { color: var(--cyan-live);}
 
-/* WORKSHOPS */
-.ws-list{counter-reset:ws;display:flex;flex-direction:column;gap:10px;}
-.ws-item{counter-increment:ws;padding:14px 18px 14px 52px;background:rgba(4,12,24,0.6);border:1px solid var(--border);border-radius:13px;position:relative;font-size:0.88rem;color:var(--text-mid);line-height:1.55;transition:border-color 0.18s,transform 0.15s;}
-.ws-item::before{content:counter(ws,decimal-leading-zero);position:absolute;left:13px;top:50%;transform:translateY(-50%);font-family:'Space Mono',monospace;font-size:0.7rem;font-weight:700;color:var(--teal);}
-.ws-item:hover{border-color:rgba(0,229,200,0.25);transform:translateX(4px);background:rgba(0,229,200,0.03);}
-.ws-item strong{color:var(--text);}
+.badge-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 18px;
+  border-radius: 60px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Space Mono', monospace;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(34,211,238,0.4);
+  background: rgba(34,211,238,0.12);
+  letter-spacing: 0.3px;
+}
 
-/* SKILLS */
-.skill-group{margin-top:18px;}
-.skill-group:first-child{margin-top:0;}
-.skill-group-label{font-family:'Space Mono',monospace;font-size:0.67rem;letter-spacing:3px;color:var(--amber);text-transform:uppercase;margin-bottom:10px;}
-.tag-cloud{display:flex;flex-wrap:wrap;gap:7px;}
-.tag{padding:5px 14px;border-radius:100px;font-size:0.82rem;font-weight:500;border:1px solid;transition:all 0.15s ease;cursor:default;}
-.tag-c{border-color:rgba(56,182,255,0.25);color:var(--cyan);background:rgba(56,182,255,0.07);}
-.tag-t{border-color:rgba(0,229,200,0.25);color:var(--teal);background:rgba(0,229,200,0.07);}
-.tag-v{border-color:rgba(168,85,247,0.25);color:var(--violet);background:rgba(168,85,247,0.07);}
-.tag-a{border-color:rgba(255,183,0,0.25);color:var(--amber);background:rgba(255,183,0,0.07);}
-.tag-l{border-color:rgba(163,230,53,0.25);color:var(--lime);background:rgba(163,230,53,0.07);}
-.tag:hover{transform:scale(1.07);filter:brightness(1.3);box-shadow:0 2px 12px rgba(0,0,0,0.3);}
+.hero-contacts {
+  background: rgba(15,23,47,0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(34,211,238,0.35);
+  border-radius: 36px;
+  padding: 22px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 280px;
+  transition: all 0.25s;
+}
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: 500;
+}
+.contact-row i { width: 20px; color: var(--amber-glow); font-size: 1rem;}
+.contact-row:hover { color: white; transform: translateX(5px); text-shadow: 0 0 3px cyan;}
 
-/* FOOTER */
-.site-footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;}
-.social-row{display:flex;gap:10px;}
-.social-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:rgba(56,182,255,0.06);color:var(--text-dim);display:flex;align-items:center;justify-content:center;font-size:0.95rem;text-decoration:none;transition:all 0.18s ease;}
-.social-btn:hover{background:var(--cyan);color:#000;border-color:var(--cyan);transform:translateY(-3px) scale(1.08);box-shadow:0 6px 20px rgba(56,182,255,0.35);}
-.footer-copy{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--text-dim);}
+.wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5vw 80px;
+}
 
-::-webkit-scrollbar{width:5px;}
-::-webkit-scrollbar-track{background:var(--bg);}
-::-webkit-scrollbar-thumb{background:rgba(56,182,255,0.25);border-radius:3px;}
-::-webkit-scrollbar-thumb:hover{background:var(--cyan);}
+/* stats glassmorph */
+.stat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-top: 32px;
+  background: var(--bg-card);
+  border-radius: 32px;
+  overflow: hidden;
+  border: 1px solid var(--border-glow);
+  box-shadow: var(--shadow-cyan);
+}
+.stat-item {
+  flex: 1;
+  padding: 28px 16px;
+  text-align: center;
+  background: rgba(15, 23, 47, 0.6);
+  transition: all 0.2s;
+}
+.stat-item:hover { background: rgba(34,211,238,0.05);}
+.stat-num {
+  font-family: 'Manrope', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(145deg, var(--cyan-live), var(--teal-mint));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat-label { font-size: 0.8rem; font-weight: 500; color: var(--text-dim); letter-spacing: 0.5px; margin-top: 6px;}
 
-@media(max-width:600px){
-  .stat-row{flex-wrap:wrap;}
-  .stat-item{border-right:none;border-bottom:1px solid var(--border);flex:0 0 50%;}
-  .focus-banner{flex-direction:column;gap:14px;padding:22px;}
-  .wrapper{padding:0 16px 60px;}
-  .hero-label::before{display:none;}
+/* focus banner vivid */
+.focus-banner {
+  margin-top: 32px;
+  padding: 28px 36px;
+  border-radius: 32px;
+  background: linear-gradient(125deg, rgba(34,211,238,0.1), rgba(192,132,252,0.07));
+  border-left: 5px solid var(--cyan-live);
+  backdrop-filter: blur(4px);
+  transition: 0.2s;
+}
+.focus-icon { font-size: 2.5rem; color: var(--cyan-live);}
+.focus-text { color: var(--text-soft); line-height: 1.7; font-size: 1rem;}
+
+/* tabs vibrant */
+.tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 44px 0 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(34,211,238,0.2);
+}
+.tab-btn {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 26px;
+  border-radius: 100px;
+  border: 1px solid rgba(34,211,238,0.3);
+  background: rgba(15, 23, 47, 0.6);
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(4px);
+}
+.tab-btn i { font-size: 0.85rem;}
+.tab-btn:hover { background: var(--cyan-bright); color: #020617; border-color: var(--cyan-live); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(34,211,238,0.3);}
+.tab-btn.active { background: linear-gradient(95deg, var(--cyan-bright), var(--teal-mint)); color: #020617; border-color: white; box-shadow: 0 6px 16px rgba(34,211,238,0.4);}
+
+/* cards premium */
+.card {
+  background: var(--bg-card);
+  border-radius: 32px;
+  padding: 32px 34px;
+  border: 1px solid rgba(34,211,238,0.2);
+  transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  backdrop-filter: blur(2px);
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34,211,238,0.5);
+  box-shadow: 0 24px 48px -12px rgba(34,211,238,0.25);
+  background: var(--bg-card-hover);
+}
+.card-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--cyan-live);
+  margin-bottom: 24px;
+  display: flex;
+  gap: 12px;
+  border-bottom: 2px solid rgba(34,211,238,0.3);
+  padding-bottom: 12px;
+}
+.card-title i { color: var(--amber-glow);}
+
+/* timeline items enhanced */
+.tl-item {
+  padding: 18px 22px;
+  background: rgba(2, 6, 23, 0.5);
+  border-radius: 20px;
+  border-left: 4px solid var(--cyan-live);
+  transition: 0.2s;
+}
+.tl-item:hover { background: rgba(34,211,238,0.07); transform: translateX(6px); border-left-color: var(--teal-mint);}
+.tl-date { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--teal-mint); letter-spacing: 0.5px;}
+.tl-title { font-weight: 700; font-size: 1rem; margin: 6px 0 2px; color: white;}
+
+/* publication full content */
+.pub-list { counter-reset: pub; }
+.pub-item {
+  counter-increment: pub;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  padding: 24px 28px 24px 70px;
+  margin-bottom: 18px;
+  position: relative;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  transition: all 0.2s;
+}
+.pub-item::before {
+  content: counter(pub);
+  position: absolute;
+  left: 22px;
+  top: 28px;
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, var(--amber-glow), #f97316);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #020617;
+}
+.pub-item:hover { border-color: var(--amber-glow); transform: translateX(6px); background: rgba(251, 191, 36, 0.05);}
+.pub-title { font-weight: 700; font-size: 1rem; color: white; margin-bottom: 6px;}
+.pub-authors { font-size: 0.85rem; color: var(--text-soft); margin-bottom: 6px;}
+.pub-authors .me { color: var(--cyan-live); font-weight: 700;}
+.pub-journal { font-size: 0.8rem; font-style: italic; color: var(--amber-glow); display: inline-block; margin-top: 5px;}
+.pub-doi { font-family: 'Space Mono', monospace; color: var(--teal-mint); text-decoration: none; font-size: 0.7rem; display: inline-block; margin-top: 8px;}
+
+.conf-item, .ws-item {
+  background: rgba(2, 6, 23, 0.5);
+  border-radius: 20px;
+  padding: 16px 20px 16px 55px;
+  margin-bottom: 12px;
+  position: relative;
+  transition: 0.2s;
+}
+.conf-item::before, .ws-item::before {
+  content: "●";
+  position: absolute;
+  left: 20px;
+  color: var(--cyan-live);
+  font-size: 1.2rem;
+}
+.conf-item:hover, .ws-item:hover { background: rgba(34,211,238,0.08); transform: translateX(4px);}
+.conf-item strong, .ws-item strong { color: white;}
+
+.award-item {
+  background: linear-gradient(115deg, rgba(251, 191, 36, 0.08), rgba(34,211,238,0.02));
+  border-radius: 24px;
+  padding: 20px 26px;
+  border-left: 5px solid var(--amber-glow);
+  transition: 0.2s;
+}
+.award-name { font-weight: 800; color: var(--amber-glow); font-size: 1rem; margin-bottom: 5px;}
+.award-body { font-size: 0.85rem; color: var(--text-soft);}
+.award-meta { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--text-dim); margin-top: 6px;}
+
+.tag {
+  padding: 6px 16px;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  background: rgba(34,211,238,0.08);
+  border: 1px solid rgba(34,211,238,0.3);
+  transition: all 0.15s;
+}
+.tag:hover { transform: scale(1.05); background: var(--cyan-bright); color: #020617; border-color: white;}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 30px;
+  background: rgba(34,211,238,0.1);
+  border: 1px solid rgba(34,211,238,0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  color: var(--cyan-live);
+}
+.social-btn:hover { background: var(--cyan-live); color: #020617; transform: translateY(-4px); box-shadow: 0 8px 20px rgba(34,211,238,0.5);}
+
+.site-footer {
+  margin-top: 70px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(34,211,238,0.2);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.section { display: none; animation: fadeSlide 0.3s ease-out; }
+.section.active { display: block; }
+@keyframes fadeSlide { from { opacity: 0; transform: translateY(12px);} to { opacity: 1; transform: translateY(0);} }
+
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 28px; }
+@media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } .card { padding: 24px; } }
+
+/* responsiveness */
+@media (max-width: 550px) {
+  .hero-inner { gap: 18px; }
+  .profile-ring { width: 120px; height: 120px; margin: 0 auto; }
+  .stat-item { padding: 16px; }
 }
 </style>
 </head>
 <body>
-
-<div class="bg-mesh"></div>
-<div class="bg-grid"></div>
+<div class="bg-aurora"></div>
+<div class="bg-grid-modern"></div>
 
 <header class="hero">
-  <div class="hero-mountain"></div>
-  <div class="hero-tint"></div>
-  <div class="hero-orb hero-orb-1"></div>
-  <div class="hero-orb hero-orb-2"></div>
-  <div class="hero-orb hero-orb-3"></div>
+  <div class="hero-mountain-dynamic"></div>
+  <div class="hero-tint-vibrant"></div>
+  <div class="hero-orb-animated hero-orb-cyan"></div>
+  <div class="hero-orb-animated hero-orb-purple"></div>
+  <div class="hero-orb-animated hero-orb-teal"></div>
   <div class="hero-inner">
-    <div class="profile-wrap">
+    <div class="profile-ring">
       <img src="IMG_1221 (1).JPG" alt="Shiwam Singh">
     </div>
     <div class="hero-text">
-      <div class="hero-label"><i class="fas fa-cloud-sun"></i> Atmospheric Science &middot; IIT Roorkee</div>
-      <h1 class="hero-name">Shiwam<br><span class="accent">Singh</span></h1>
-      <p class="hero-role"><i class="fas fa-atom"></i> PhD Researcher &middot; Boundary Layer Meteorology &middot; NWP Modeling</p>
-      <div class="badge-row">
-        <span class="badge badge-cyan"><i class="fas fa-university"></i> IIT Roorkee &middot; CoEDMM</span>
-        <span class="badge badge-teal"><i class="fas fa-award"></i> EGU Travel Awardee 2026</span>
-        <span class="badge badge-violet"><i class="fas fa-flask"></i> 3rd Year PhD</span>
+      <div class="hero-label" style="font-family: 'Space Mono', monospace; letter-spacing: 3px; font-size: 0.7rem; color: var(--cyan-live);"><i class="fas fa-cloud-moon"></i> ATMOSPHERIC SCIENCES · IIT ROORKEE</div>
+      <h1 class="hero-name">Shiwam<br><span style="background: linear-gradient(120deg, #fff, var(--cyan-live)); -webkit-background-clip:text; background-clip:text; color:transparent;">Singh</span></h1>
+      <p class="hero-role"><i class="fas fa-microchip"></i> PhD Researcher · Boundary Layer Meteorology · NWP Modeling</p>
+      <div class="badge-row" style="display:flex; gap:12px; margin-top: 16px; flex-wrap:wrap;">
+        <span class="badge-modern"><i class="fas fa-university"></i> IIT Roorkee · CoEDMM</span>
+        <span class="badge-modern"><i class="fas fa-award"></i> EGU Travel Awardee 2026</span>
+        <span class="badge-modern"><i class="fas fa-flask"></i> 3rd Year PhD</span>
       </div>
     </div>
     <div class="hero-contacts">
       <a href="mailto:shiwam_s@dm.iitr.ac.in" class="contact-row"><i class="fas fa-envelope"></i> shiwam_s@dm.iitr.ac.in</a>
-      <a href="mailto:shivambela1@gmail.com" class="contact-row"><i class="fas fa-envelope"></i> shivambela1@gmail.com</a>
-      <a href="tel:+919198093834" class="contact-row"><i class="fas fa-phone"></i> +91 9198093834</a>
+      <a href="mailto:shivambela1@gmail.com" class="contact-row"><i class="fas fa-paper-plane"></i> shivambela1@gmail.com</a>
+      <a href="tel:+919198093834" class="contact-row"><i class="fas fa-phone-alt"></i> +91 9198093834</a>
       <a href="https://linkedin.com/in/shiwam-singh-ab1392219" target="_blank" class="contact-row"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
       <a href="https://scholar.google.co.in/citations?user=D6hiOkkAAAAJ&hl=en" target="_blank" class="contact-row"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
     </div>
@@ -240,302 +498,157 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-
 </header>
 
 <main class="wrapper">
-
-  <div class="stat-row">
-    <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Publications</div></div>
-    <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">Conferences</div></div>
-    <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Awards</div></div>
-    <div class="stat-item"><div class="stat-num">10</div><div class="stat-label">Workshops</div></div>
-    <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Years Research</div></div>
+  <div class="stat-grid">
+    <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">PUBLICATIONS</div></div>
+    <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">CONFERENCES</div></div>
+    <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">AWARDS</div></div>
+    <div class="stat-item"><div class="stat-num">10</div><div class="stat-label">WORKSHOPS</div></div>
+    <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">YEARS RESEARCH</div></div>
   </div>
 
   <div class="focus-banner">
-    <div class="focus-icon"><i class="fas fa-wind"></i></div>
-    <div>
-      <div class="focus-label">Research Focus</div>
-      <div class="focus-text">
-        <strong>Boundary layer meteorology</strong> &nbsp;&middot;&nbsp;
-        <strong>Surface layer parameterization in NWP models</strong> &nbsp;&middot;&nbsp;
-        Improving weather prediction over mountainous regions &nbsp;&middot;&nbsp;
-        Surface-atmosphere interaction processes &nbsp;&middot;&nbsp;
-        NWP model tuning for complex terrains &nbsp;&middot;&nbsp;
-        Real-time weather forecast over mountainous regions
-      </div>
-    </div>
+    <div style="display:flex; gap:18px; align-items:center; flex-wrap:wrap;"><div class="focus-icon"><i class="fas fa-wind"></i></div>
+    <div><div class="focus-label" style="font-family: 'Space Mono', monospace; letter-spacing: 4px; color: var(--cyan-live);">RESEARCH FOCUS</div>
+    <div class="focus-text"><strong>Boundary layer meteorology</strong> · <strong>Surface layer parameterization in NWP models</strong> · Improving weather prediction over mountainous regions · Surface-atmosphere interaction · NWP model tuning for complex terrains · Real-time weather forecast over mountainous regions</div>
+    </div></div>
   </div>
 
   <nav class="tab-nav" id="tabNav">
-    <a class="tab-btn" href="#education"    data-section="education">   <i class="fas fa-graduation-cap"></i> Education</a>
-    <a class="tab-btn" href="#experience"   data-section="experience">  <i class="fas fa-briefcase"></i> Experience</a>
+    <a class="tab-btn" href="#education" data-section="education"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a class="tab-btn" href="#experience" data-section="experience"><i class="fas fa-briefcase"></i> Experience</a>
     <a class="tab-btn" href="#publications" data-section="publications"><i class="fas fa-file-alt"></i> Publications</a>
-    <a class="tab-btn" href="#conferences"  data-section="conferences"> <i class="fas fa-chalkboard-teacher"></i> Conferences</a>
-    <a class="tab-btn" href="#awards"       data-section="awards">      <i class="fas fa-award"></i> Awards</a>
-    <a class="tab-btn" href="#workshops"    data-section="workshops">   <i class="fas fa-tools"></i> Workshops</a>
-    <a class="tab-btn" href="#skills"       data-section="skills">      <i class="fas fa-code"></i> Skills</a>
+    <a class="tab-btn" href="#conferences" data-section="conferences"><i class="fas fa-chalkboard-user"></i> Conferences</a>
+    <a class="tab-btn" href="#awards" data-section="awards"><i class="fas fa-trophy"></i> Awards</a>
+    <a class="tab-btn" href="#workshops" data-section="workshops"><i class="fas fa-laptop-code"></i> Workshops</a>
+    <a class="tab-btn" href="#skills" data-section="skills"><i class="fas fa-code"></i> Skills</a>
   </nav>
 
-  <!-- EDUCATION -->
-  <section class="section" id="section-education">
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title"><i class="fas fa-graduation-cap"></i> Doctoral Studies</div>
-        <div class="timeline">
-          <div class="tl-item">
-            <div class="tl-date">July 2023 &ndash; Present &middot; 3rd Year</div>
-            <div class="tl-title">Ph.D. in Disaster Mitigation &amp; Management</div>
-            <div class="tl-sub">Indian Institute of Technology Roorkee</div>
-            <div class="tl-desc">Centre of Excellence in Disaster Mitigation and Management (CoEDMM)</div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-date">Nov 2022 &ndash; Jul 2023</div>
-            <div class="tl-title">Junior Research Fellow</div>
-            <div class="tl-sub">IIT Roorkee, CoEDMM</div>
-            <div class="tl-desc">"Improved Representation of Surface Layer Parameterizations in WRF Model"</div>
-          </div>
-        </div>
-      </div>
-      <div class="card card-teal">
-        <div class="card-title teal"><i class="fas fa-university"></i> Previous Degrees</div>
-        <div class="timeline">
-          <div class="tl-item"><div class="tl-date">2020 &ndash; 2022</div><div class="tl-title">M.Sc. Mathematics</div><div class="tl-sub">IIT Hyderabad</div></div>
-          <div class="tl-item"><div class="tl-date">2016 &ndash; 2019</div><div class="tl-title">B.Sc. Mathematics</div><div class="tl-sub">Kisan P.G. College, Dr. RMLAU Ayodhya</div></div>
-          <div class="tl-item"><div class="tl-date">2014 &ndash; 2016</div><div class="tl-title">Class XII</div><div class="tl-sub">R.S. Inter College Shivpur, Bahraich</div></div>
-          <div class="tl-item"><div class="tl-date">2013 &ndash; 2014</div><div class="tl-title">Class X</div><div class="tl-sub">Mahanand Awasthi Inter College Shivpur, Bahraich</div></div>
-        </div>
-      </div>
-      <div class="card card-violet">
-        <div class="card-title violet"><i class="fas fa-project-diagram"></i> Master's Projects</div>
-        <div class="timeline">
-          <div class="tl-item"><div class="tl-date">July 2021 &ndash; Dec 2021</div><div class="tl-title">Riemann-Roch Theorem for Function Fields</div><div class="tl-sub">IIT Hyderabad</div></div>
-          <div class="tl-item"><div class="tl-date">Jan 2022 &ndash; June 2022</div><div class="tl-title">Arcs in Finite Projective Spaces</div><div class="tl-sub">IIT Hyderabad</div></div>
-        </div>
-      </div>
+  <section class="section" id="section-education"><div class="grid-2">
+    <div class="card"><div class="card-title"><i class="fas fa-graduation-cap"></i> Doctoral Studies</div>
+      <div class="tl-item"><div class="tl-date">July 2023 – Present · 3rd Year</div><div class="tl-title">Ph.D. in Disaster Mitigation & Management</div><div class="tl-sub">Indian Institute of Technology Roorkee</div><div class="tl-desc">Centre of Excellence in Disaster Mitigation and Management (CoEDMM)</div></div>
+      <div class="tl-item"><div class="tl-date">Nov 2022 – Jul 2023</div><div class="tl-title">Junior Research Fellow</div><div class="tl-sub">IIT Roorkee, CoEDMM</div><div class="tl-desc">"Improved Representation of Surface Layer Parameterizations in WRF Model"</div></div>
     </div>
-  </section>
+    <div class="card"><div class="card-title teal"><i class="fas fa-university"></i> Previous Degrees</div>
+      <div class="tl-item"><div class="tl-date">2020 – 2022</div><div class="tl-title">M.Sc. Mathematics</div><div class="tl-sub">IIT Hyderabad</div></div>
+      <div class="tl-item"><div class="tl-date">2016 – 2019</div><div class="tl-title">B.Sc. Mathematics</div><div class="tl-sub">Kisan P.G. College, Dr. RMLAU Ayodhya</div></div>
+      <div class="tl-item"><div class="tl-date">2014 – 2016</div><div class="tl-title">Class XII</div><div class="tl-sub">R.S. Inter College Shivpur, Bahraich</div></div>
+      <div class="tl-item"><div class="tl-date">2013 – 2014</div><div class="tl-title">Class X</div><div class="tl-sub">Mahanand Awasthi Inter College Shivpur, Bahraich</div></div>
+    </div>
+    <div class="card"><div class="card-title violet"><i class="fas fa-project-diagram"></i> Master's Projects</div>
+      <div class="tl-item"><div class="tl-date">July 2021 – Dec 2021</div><div class="tl-title">Riemann-Roch Theorem for Function Fields</div><div class="tl-sub">IIT Hyderabad</div></div>
+      <div class="tl-item"><div class="tl-date">Jan 2022 – June 2022</div><div class="tl-title">Arcs in Finite Projective Spaces</div><div class="tl-sub">IIT Hyderabad</div></div>
+    </div>
+  </div></section>
 
-  <!-- EXPERIENCE -->
-  <section class="section" id="section-experience">
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title"><i class="fas fa-briefcase"></i> Research Experience</div>
-        <div class="timeline">
-          <div class="tl-item">
-            <div class="tl-date">Nov 2022 &ndash; Jul 2023</div>
-            <div class="tl-title">Junior Research Fellow</div>
-            <div class="tl-sub">CoEDMM, IIT Roorkee</div>
-            <div class="tl-desc">Surface Layer Parameterizations in WRF Model</div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-date">Nov 2023 &ndash; Present</div>
-            <div class="tl-title">PhD Research &middot; NWP Modeling</div>
-            <div class="tl-sub">CoEDMM, IIT Roorkee</div>
-            <div class="tl-desc">Hands-on experience with WRF-ARW, WRF-UCM, WRF-Chem, and RegCM for high-resolution weather and climate simulations. Working on subgrid-scale parameterization using high-frequency eddy covariance observations over complex mountainous terrain.</div>
-          </div>
-        </div>
-      </div>
-      <div class="card card-teal">
-        <div class="card-title teal"><i class="fas fa-cogs"></i> Modeling &amp; Observational Expertise</div>
-        <div class="skill-group">
-          <div class="skill-group-label">NWP Models</div>
-          <div class="tag-cloud"><span class="tag tag-c">WRF-ARW</span><span class="tag tag-c">WRF-UCM</span><span class="tag tag-c">WRF-Chem</span><span class="tag tag-t">RegCM</span></div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">Methods &amp; Theory</div>
-          <div class="tag-cloud">
-            <span class="tag tag-t">Boundary Layer Meteorology</span>
-            <span class="tag tag-t">Surface Layer Parameterization</span>
-            <span class="tag tag-v">Monin-Obukhov Similarity Theory</span>
-            <span class="tag tag-v">Data Assimilation</span>
-            <span class="tag tag-a">Eddy Covariance</span>
-            <span class="tag tag-a">High Frequency Observations</span>
-          </div>
-        </div>
-      </div>
+  <section class="section" id="section-experience"><div class="grid-2">
+    <div class="card"><div class="card-title"><i class="fas fa-briefcase"></i> Research Experience</div>
+      <div class="tl-item"><div class="tl-date">Nov 2022 – Jul 2023</div><div class="tl-title">Junior Research Fellow</div><div class="tl-sub">CoEDMM, IIT Roorkee</div><div class="tl-desc">Surface Layer Parameterizations in WRF Model</div></div>
+      <div class="tl-item"><div class="tl-date">Nov 2023 – Present</div><div class="tl-title">PhD Research · NWP Modeling</div><div class="tl-sub">CoEDMM, IIT Roorkee</div><div class="tl-desc">Hands-on experience with WRF-ARW, WRF-UCM, WRF-Chem, and RegCM for high-resolution weather and climate simulations. Working on subgrid-scale parameterization using high-frequency eddy covariance observations over complex mountainous terrain.</div></div>
     </div>
-  </section>
+    <div class="card"><div class="card-title teal"><i class="fas fa-cogs"></i> Modeling & Observational Expertise</div>
+      <div class="skill-group"><div class="skill-group-label" style="color:var(--teal-mint);">NWP Models</div><div class="tag-cloud"><span class="tag">WRF-ARW</span><span class="tag">WRF-UCM</span><span class="tag">WRF-Chem</span><span class="tag">RegCM</span></div></div>
+      <div class="skill-group"><div class="skill-group-label" style="color:var(--teal-mint);">Methods & Theory</div><div class="tag-cloud"><span class="tag">Boundary Layer Meteorology</span><span class="tag">Surface Layer Parameterization</span><span class="tag">Monin-Obukhov Similarity Theory</span><span class="tag">Data Assimilation</span><span class="tag">Eddy Covariance</span><span class="tag">High Frequency Observations</span></div></div>
+    </div>
+  </div></section>
 
-  <!-- PUBLICATIONS -->
-  <section class="section" id="section-publications">
-    <div class="grid-1">
-      <div class="card card-amber">
-        <div class="card-title amber"><i class="fas fa-file-alt"></i> Journal Publications</div>
-        <div class="pub-list">
-          <div class="pub-item">
-            <div class="pub-title">Parameterization of Surface Layer Processes in Extreme Weather Conditions over Mountainous Region</div>
-            <div class="pub-authors"><span class="me">Singh, S.</span> &amp; Srivastava, P. (2025)</div>
-            <div class="pub-journal">Weather and Forecasting</div><br>
-            <a href="https://doi.org/10.1175/WAF-D-24-0178.1" target="_blank" class="pub-doi">&rarr; doi:10.1175/WAF-D-24-0178.1</a>
-          </div>
-          <div class="pub-item">
-            <div class="pub-title">Chronicle of Destruction: The Wayanad Landslide of July 30, 2024</div>
-            <div class="pub-authors">Yunus, A.P., Sajinkumar, K.S., Gopinath, G., Subramanian, S.S., Kaushal, S., Thanveer, J., Achu, A.L., Islam, S.M.U., Ishan, A., Krishnapriya, V.K., Rajaneesh, A., Dewrari, M., Dixit, S., <span class="me">Singh, S.</span>, Srivastava, P., Oommen, T., Nedumpallile-Vasu, N., Sen, S., Narayana, A.C., Ambili, V., Pradeep, G.S., &amp; Kuriakose, S.L. (2025)</div>
-            <div class="pub-journal">Landslides</div><br>
-            <a href="https://doi.org/10.1007/s10346-025-02494-y" target="_blank" class="pub-doi">&rarr; doi:10.1007/s10346-025-02494-y</a>
-          </div>
-          <div class="pub-item">
-            <div class="pub-title">A framework for impact based heat stress warning system for a coastal city in India</div>
-            <div class="pub-authors">Kacker, K., Utpal, A., <span class="me">Singh, S.</span>, Srivastava, P., Mukherjee, M., Subramanian, S. S., &amp; Rakesh, R. (2026)</div>
-            <div class="pub-journal">Scientific Reports</div><br>
-            <a href="https://doi.org/10.1038/s41598-026-38639-9" target="_blank" class="pub-doi">&rarr; doi:10.1038/s41598-026-38639-9</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="section" id="section-publications"><div class="card"><div class="card-title amber"><i class="fas fa-file-alt"></i> Journal Publications</div><div class="pub-list">
+    <div class="pub-item"><div class="pub-title">Parameterization of Surface Layer Processes in Extreme Weather Conditions over Mountainous Region</div><div class="pub-authors"><span class="me">Singh, S.</span> & Srivastava, P. (2025)</div><div class="pub-journal">Weather and Forecasting</div><br><a href="https://doi.org/10.1175/WAF-D-24-0178.1" target="_blank" class="pub-doi">→ doi:10.1175/WAF-D-24-0178.1</a></div>
+    <div class="pub-item"><div class="pub-title">Chronicle of Destruction: The Wayanad Landslide of July 30, 2024</div><div class="pub-authors">Yunus, A.P., Sajinkumar, K.S., Gopinath, G., Subramanian, S.S., Kaushal, S., Thanveer, J., Achu, A.L., Islam, S.M.U., Ishan, A., Krishnapriya, V.K., Rajaneesh, A., Dewrari, M., Dixit, S., <span class="me">Singh, S.</span>, Srivastava, P., Oommen, T., Nedumpallile-Vasu, N., Sen, S., Narayana, A.C., Ambili, V., Pradeep, G.S., & Kuriakose, S.L. (2025)</div><div class="pub-journal">Landslides</div><br><a href="https://doi.org/10.1007/s10346-025-02494-y" target="_blank" class="pub-doi">→ doi:10.1007/s10346-025-02494-y</a></div>
+    <div class="pub-item"><div class="pub-title">A framework for impact based heat stress warning system for a coastal city in India</div><div class="pub-authors">Kacker, K., Utpal, A., <span class="me">Singh, S.</span>, Srivastava, P., Mukherjee, M., Subramanian, S. S., & Rakesh, R. (2026)</div><div class="pub-journal">Scientific Reports</div><br><a href="https://doi.org/10.1038/s41598-026-38639-9" target="_blank" class="pub-doi">→ doi:10.1038/s41598-026-38639-9</a></div>
+  </div></div></section>
 
-  <!-- CONFERENCES -->
-  <section class="section" id="section-conferences">
-    <div class="card">
-      <div class="card-title"><i class="fas fa-chalkboard-teacher"></i> Conference Presentations</div>
-      <div class="conf-list">
-        <div class="conf-item"><strong>Srivastava, P., &amp; Singh, S. (2024).</strong> Towards improved parameterization of surface turbulent fluxes in extreme weather conditions over mountainous region. <em>9th GEWEX Open Science Conference</em>, 07&ndash;12 July 2024, Sapporo, Hokkaido, Japan.</div>
-        <div class="conf-item"><strong>Singh, S., &amp; Srivastava, P. (2024).</strong> Applicability of Monin-Obukhov Similarity Theory in Stable Conditions over Mountainous Region. <em>AGU Fall Meeting Abstracts 2024</em>, Issue 2168, NH31F-2168.</div>
-        <div class="conf-item"><strong>Utpal, A., Srivastava, P., Singh, S., &amp; Subramanian, S.S. (2025).</strong> Modelling and Analysis of Heat Stress over an Urban City in India. <em>JpGU Meeting 2025</em>, Session A-AS05: Weather, Climate, and Environmental Science Studies using High-Performance Computing.</div>
-        <div class="conf-item"><strong>Srivastava, P., Singh, S., Singh, S., Prabhakaran, A., Subramanian, S. S., &amp; Pulpadan, Y. A. (2025).</strong> Numerical Weather Prediction Model Underestimated the Extent of Extreme Rainfall Event During the 2024 Wayanad (Kerala, India) Landslide. <em>Japan Geoscience Union (JpGU) Meeting 2025</em>, Session A-AS03, 26&ndash;31 May 2025, Chiba, Japan.</div>
-        <div class="conf-item"><strong>Yalakala, G., Srivastava, P., &amp; Singh, S. (2025).</strong> Evaluation of the Impacts of Land Use/Land Cover Changes on Weather Forecast Using the WRF Model Over an Urban Area (Dehradun) in India. <em>AOGS 2025 &ndash; 22nd Annual Meeting</em>, Abstract AS66-A012, 27 July &ndash; 01 August 2025, Singapore.</div>
-        <div class="conf-item"><strong>Singh, S., &amp; Srivastava, P. (2025).</strong> Evaluation of Different Similarity Functions Under Stable Conditions Over a Mountainous Region. <em>INTROMET-2025</em>, 18&ndash;20 November 2025, IITM, Pune, India.</div>
-        <div class="conf-item"><strong>Singh, S., &amp; Srivastava, P. (2025).</strong> Evaluation of Different Parameterizations for the Computation of Surface Fluxes over Mountainous Region. <em>AGU Fall Meeting Abstracts 2025</em>, A41L-VR8809.</div>
-        <div class="conf-item"><strong>Singh, S., &amp; Srivastava, P. (2026).</strong> Parameterization of Surface Layer Processes under Stable Conditions over Mountainous Region. <em>EGU General Assembly 2026</em>, Abstract EGU26-801, 3&ndash;8 May 2026, Vienna, Austria.</div>
-      </div>
-    </div>
-  </section>
+  <section class="section" id="section-conferences"><div class="card"><div class="card-title"><i class="fas fa-chalkboard-user"></i> Conference Presentations</div>
+    <div class="conf-item"><strong>Srivastava, P., &amp; Singh, S. (2024).</strong> Towards improved parameterization of surface turbulent fluxes in extreme weather conditions over mountainous region. <em>9th GEWEX Open Science Conference</em>, 07–12 July 2024, Sapporo, Hokkaido, Japan.</div>
+    <div class="conf-item"><strong>Singh, S., &amp; Srivastava, P. (2024).</strong> Applicability of Monin-Obukhov Similarity Theory in Stable Conditions over Mountainous Region. <em>AGU Fall Meeting Abstracts 2024</em>, Issue 2168, NH31F-2168.</div>
+    <div class="conf-item"><strong>Utpal, A., Srivastava, P., Singh, S., &amp; Subramanian, S.S. (2025).</strong> Modelling and Analysis of Heat Stress over an Urban City in India. <em>JpGU Meeting 2025</em>, Session A-AS05: Weather, Climate, and Environmental Science Studies using High-Performance Computing.</div>
+    <div class="conf-item"><strong>Srivastava, P., Singh, S., Singh, S., Prabhakaran, A., Subramanian, S. S., &amp; Pulpadan, Y. A. (2025).</strong> Numerical Weather Prediction Model Underestimated the Extent of Extreme Rainfall Event During the 2024 Wayanad (Kerala, India) Landslide. <em>Japan Geoscience Union (JpGU) Meeting 2025</em>, Session A-AS03, 26–31 May 2025, Chiba, Japan.</div>
+    <div class="conf-item"><strong>Yalakala, G., Srivastava, P., &amp; Singh, S. (2025).</strong> Evaluation of the Impacts of Land Use/Land Cover Changes on Weather Forecast Using the WRF Model Over an Urban Area (Dehradun) in India. <em>AOGS 2025 – 22nd Annual Meeting</em>, Abstract AS66-A012, 27 July – 01 August 2025, Singapore.</div>
+    <div class="conf-item"><strong>Singh, S., &amp; Srivastava, P. (2025).</strong> Evaluation of Different Similarity Functions Under Stable Conditions Over a Mountainous Region. <em>INTROMET-2025</em>, 18–20 November 2025, IITM, Pune, India.</div>
+    <div class="conf-item"><strong>Singh, S., &amp; Srivastava, P. (2025).</strong> Evaluation of Different Parameterizations for the Computation of Surface Fluxes over Mountainous Region. <em>AGU Fall Meeting Abstracts 2025</em>, A41L-VR8809.</div>
+    <div class="conf-item"><strong>Singh, S., &amp; Srivastava, P. (2026).</strong> Parameterization of Surface Layer Processes under Stable Conditions over Mountainous Region. <em>EGU General Assembly 2026</em>, Abstract EGU26-801, 3–8 May 2026, Vienna, Austria.</div>
+  </div></section>
 
-  <!-- AWARDS -->
-  <section class="section" id="section-awards">
-    <div class="grid-2">
-      <div class="card card-amber">
-        <div class="card-title amber"><i class="fas fa-award"></i> Honors &amp; Awards</div>
-        <div class="award-list">
-          <div class="award-item">
-            <div class="award-name">&#127942; Early Career Scientist Travel Support Awardee</div>
-            <div class="award-body">EGU General Assembly 2026 &middot; Vienna, Austria</div>
-            <div class="award-meta">Registration fee waiver &middot; &euro;300 travel support &middot; APC refund</div>
-          </div>
-          <div class="award-item">
-            <div class="award-name">&#9992;&#65039; Travel Grant Awardee</div>
-            <div class="award-body">HPC4Climate Summer School 2025 &middot; Max Planck Institute, Germany</div>
-            <div class="award-meta">&euro;500 travel grant</div>
-          </div>
-          <div class="award-item">
-            <div class="award-name">&#129352; 2nd Prize &ndash; Poster Presentation</div>
-            <div class="award-body">Research Scholar's Day, CoEDMM, IIT Roorkee &middot; 13 October 2025</div>
-            <div class="award-meta">"Analysis of Observed Behavior of Heat and Momentum Fluxes Over Mountainous Region"</div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title"><i class="fas fa-certificate"></i> Scholastic Achievements</div>
-        <div class="award-list">
-          <div class="award-item">
-            <div class="award-name">&#128203; GATE Qualified</div>
-            <div class="award-body">Graduate Aptitude Test in Engineering</div>
-            <div class="award-meta">2022 &amp; 2023</div>
-          </div>
-          <div class="award-item">
-            <div class="award-name">&#128203; JAM Qualified</div>
-            <div class="award-body">Joint Admission Test for Masters</div>
-            <div class="award-meta">2019 &amp; 2020</div>
-          </div>
-        </div>
-      </div>
+  <section class="section" id="section-awards"><div class="grid-2">
+    <div class="card"><div class="card-title amber"><i class="fas fa-award"></i> Honors & Awards</div>
+      <div class="award-item"><div class="award-name">🏆 Early Career Scientist Travel Support Awardee</div><div class="award-body">EGU General Assembly 2026 · Vienna, Austria</div><div class="award-meta">Registration fee waiver · €300 travel support · APC refund</div></div>
+      <div class="award-item"><div class="award-name">✈️ Travel Grant Awardee</div><div class="award-body">HPC4Climate Summer School 2025 · Max Planck Institute, Germany</div><div class="award-meta">€500 travel grant</div></div>
+      <div class="award-item"><div class="award-name">🥈 2nd Prize – Poster Presentation</div><div class="award-body">Research Scholar's Day, CoEDMM, IIT Roorkee · 13 October 2025</div><div class="award-meta">"Analysis of Observed Behavior of Heat and Momentum Fluxes Over Mountainous Region"</div></div>
     </div>
-  </section>
+    <div class="card"><div class="card-title"><i class="fas fa-certificate"></i> Scholastic Achievements</div>
+      <div class="award-item"><div class="award-name">📘 GATE Qualified</div><div class="award-body">Graduate Aptitude Test in Engineering</div><div class="award-meta">2022 & 2023</div></div>
+      <div class="award-item"><div class="award-name">📘 JAM Qualified</div><div class="award-body">Joint Admission Test for Masters</div><div class="award-meta">2019 & 2020</div></div>
+    </div>
+  </div></section>
 
-  <!-- WORKSHOPS -->
-  <section class="section" id="section-workshops">
-    <div class="card">
-      <div class="card-title teal"><i class="fas fa-tools"></i> Workshops &amp; Training</div>
-      <div class="ws-list">
-        <div class="ws-item"><strong>MTTS Programme</strong> &ndash; Level 0, IIT Guwahati (28 May &ndash; 23 Jun 2018); Levels I &amp; II, IISER Thiruvananthapuram (2019 &amp; 2020).</div>
-        <div class="ws-item"><strong>FORESEED Workshop</strong> &ndash; Forecasting and Early-Warning of Extreme Events and Disasters, CoEDMM IIT Roorkee (2&ndash;8 Jan 2023).</div>
-        <div class="ws-item"><strong>Disaster Risk Reduction for Museums</strong> &ndash; Heritage Safety in Himalayan Region, CoEDMM IIT Roorkee (24&ndash;25 Feb 2023).</div>
-        <div class="ws-item"><strong>Earthquake Early Warning System (EEWS)</strong> &ndash; Technical Workshop, CoEDMM IIT Roorkee (10&ndash;12 Apr 2023).</div>
-        <div class="ws-item"><strong>Weather Prediction and Climate Model</strong> &ndash; IIT Roorkee (16&ndash;20 Oct 2023).</div>
-        <div class="ws-item"><strong>Data Assimilation in Weather and Climate Models</strong> &ndash; ICTS Bengaluru, India (6&ndash;17 May 2024).</div>
-        <div class="ws-item"><strong>Advanced Data Assimilation and Inverse Modelling</strong> &ndash; 4-day customized training, NRSC Hyderabad (21&ndash;24 Jan 2025).</div>
-        <div class="ws-item"><strong>CRITICAL Workshop</strong> &ndash; Co-producing Risk-informed, Gender-responsive Actions &amp; Adaptation Pathways, CoEDMM IIT Roorkee (30 Jan 2025).</div>
-        <div class="ws-item"><strong>Eddy Covariance Training</strong> &ndash; Campbell Scientific India, Lemon Tree Premier Delhi (2 May 2025).</div>
-        <div class="ws-item"><strong>HPC4Climate Summer School 2025</strong> &ndash; Max Planck Institute for Meteorology, Lauenburg, Germany (28 Jul &ndash; 7 Aug 2025).</div>
-      </div>
-    </div>
-  </section>
+  <section class="section" id="section-workshops"><div class="card"><div class="card-title teal"><i class="fas fa-tools"></i> Workshops & Training</div>
+    <div class="ws-item"><strong>MTTS Programme</strong> – Level 0, IIT Guwahati (28 May – 23 Jun 2018); Levels I & II, IISER Thiruvananthapuram (2019 & 2020).</div>
+    <div class="ws-item"><strong>FORESEED Workshop</strong> – Forecasting and Early-Warning of Extreme Events and Disasters, CoEDMM IIT Roorkee (2–8 Jan 2023).</div>
+    <div class="ws-item"><strong>Disaster Risk Reduction for Museums</strong> – Heritage Safety in Himalayan Region, CoEDMM IIT Roorkee (24–25 Feb 2023).</div>
+    <div class="ws-item"><strong>Earthquake Early Warning System (EEWS)</strong> – Technical Workshop, CoEDMM IIT Roorkee (10–12 Apr 2023).</div>
+    <div class="ws-item"><strong>Weather Prediction and Climate Model</strong> – IIT Roorkee (16–20 Oct 2023).</div>
+    <div class="ws-item"><strong>Data Assimilation in Weather and Climate Models</strong> – ICTS Bengaluru, India (6–17 May 2024).</div>
+    <div class="ws-item"><strong>Advanced Data Assimilation and Inverse Modelling</strong> – 4-day customized training, NRSC Hyderabad (21–24 Jan 2025).</div>
+    <div class="ws-item"><strong>CRITICAL Workshop</strong> – Co-producing Risk-informed, Gender-responsive Actions & Adaptation Pathways, CoEDMM IIT Roorkee (30 Jan 2025).</div>
+    <div class="ws-item"><strong>Eddy Covariance Training</strong> – Campbell Scientific India, Lemon Tree Premier Delhi (2 May 2025).</div>
+    <div class="ws-item"><strong>HPC4Climate Summer School 2025</strong> – Max Planck Institute for Meteorology, Lauenburg, Germany (28 Jul – 7 Aug 2025).</div>
+  </div></section>
 
-  <!-- SKILLS -->
-  <section class="section" id="section-skills">
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title"><i class="fas fa-code"></i> Technical Skills</div>
-        <div class="skill-group">
-          <div class="skill-group-label">Programming Languages</div>
-          <div class="tag-cloud"><span class="tag tag-c">Python</span><span class="tag tag-c">MATLAB</span><span class="tag tag-c">Fortran</span><span class="tag tag-t">R</span><span class="tag tag-t">C++</span></div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">Environments</div>
-          <div class="tag-cloud"><span class="tag tag-v">Linux</span><span class="tag tag-v">LaTeX</span></div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">GIS &amp; Visualization</div>
-          <div class="tag-cloud"><span class="tag tag-a">ArcGIS</span><span class="tag tag-a">ERDAS Imagine</span><span class="tag tag-a">GrADS</span><span class="tag tag-a">OriginPro</span><span class="tag tag-a">Ncview</span></div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">NWP Models</div>
-          <div class="tag-cloud"><span class="tag tag-l">WRF-ARW</span><span class="tag tag-l">WRF-Chem</span><span class="tag tag-l">WRF-UCM</span><span class="tag tag-l">RegCM</span></div>
-        </div>
-      </div>
-      <div class="card card-violet">
-        <div class="card-title violet"><i class="fas fa-book-open"></i> Coursework</div>
-        <div class="skill-group">
-          <div class="skill-group-label">Algebra</div>
-          <div class="tag-cloud"><span class="tag tag-v">Advanced Linear Algebra</span><span class="tag tag-v">Groups &amp; Rings</span><span class="tag tag-v">Fields &amp; Modules</span><span class="tag tag-v">Algebraic Geometry</span><span class="tag tag-v">Modern Number Theory</span><span class="tag tag-v">Algebra Coding Theory</span></div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">Analysis</div>
-          <div class="tag-cloud"><span class="tag tag-c">Real Analysis</span><span class="tag tag-c">Complex Analysis</span><span class="tag tag-c">Numerical Analysis</span><span class="tag tag-c">Functional Analysis</span></div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">Applied Mathematics</div>
-          <div class="tag-cloud"><span class="tag tag-t">Ordinary Differential Equations</span><span class="tag tag-t">Partial Differential Equations</span><span class="tag tag-t">Probability Theory</span></div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">Climate &amp; Disaster Management</div>
-          <div class="tag-cloud"><span class="tag tag-a">Vulnerability &amp; Risk Analysis</span><span class="tag tag-a">Landslide Hazard Assessment</span><span class="tag tag-a">Remote Sensing &amp; GIS (PCC-WM)</span><span class="tag tag-a">Geo-spatial Data for Disaster Mitigation</span></div>
-        </div>
-      </div>
+  <section class="section" id="section-skills"><div class="grid-2">
+    <div class="card"><div class="card-title"><i class="fas fa-code"></i> Technical Skills</div>
+      <div class="skill-group"><div class="skill-group-label">Programming Languages</div><div class="tag-cloud"><span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">Fortran</span><span class="tag">R</span><span class="tag">C++</span></div></div>
+      <div class="skill-group"><div class="skill-group-label">Environments</div><div class="tag-cloud"><span class="tag">Linux</span><span class="tag">LaTeX</span></div></div>
+      <div class="skill-group"><div class="skill-group-label">GIS & Visualization</div><div class="tag-cloud"><span class="tag">ArcGIS</span><span class="tag">ERDAS Imagine</span><span class="tag">GrADS</span><span class="tag">OriginPro</span><span class="tag">Ncview</span></div></div>
+      <div class="skill-group"><div class="skill-group-label">NWP Models</div><div class="tag-cloud"><span class="tag">WRF-ARW</span><span class="tag">WRF-Chem</span><span class="tag">WRF-UCM</span><span class="tag">RegCM</span></div></div>
     </div>
-  </section>
+    <div class="card"><div class="card-title violet"><i class="fas fa-book-open"></i> Coursework</div>
+      <div class="skill-group"><div class="skill-group-label">Algebra</div><div class="tag-cloud"><span class="tag">Advanced Linear Algebra</span><span class="tag">Groups & Rings</span><span class="tag">Fields & Modules</span><span class="tag">Algebraic Geometry</span><span class="tag">Modern Number Theory</span><span class="tag">Algebra Coding Theory</span></div></div>
+      <div class="skill-group"><div class="skill-group-label">Analysis</div><div class="tag-cloud"><span class="tag">Real Analysis</span><span class="tag">Complex Analysis</span><span class="tag">Numerical Analysis</span><span class="tag">Functional Analysis</span></div></div>
+      <div class="skill-group"><div class="skill-group-label">Applied Mathematics</div><div class="tag-cloud"><span class="tag">Ordinary Differential Equations</span><span class="tag">Partial Differential Equations</span><span class="tag">Probability Theory</span></div></div>
+      <div class="skill-group"><div class="skill-group-label">Climate & Disaster Management</div><div class="tag-cloud"><span class="tag">Vulnerability & Risk Analysis</span><span class="tag">Landslide Hazard Assessment</span><span class="tag">Remote Sensing & GIS (PCC-WM)</span><span class="tag">Geo-spatial Data for Disaster Mitigation</span></div></div>
+    </div>
+  </div></section>
 
   <footer class="site-footer">
-    <div class="social-row">
-      <a href="https://linkedin.com/in/shiwam-singh-ab1392219" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://scholar.google.co.in/citations?user=D6hiOkkAAAAJ&hl=en" target="_blank" class="social-btn" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-      <a href="https://www.researchgate.net/profile/Shiwam-Singh-2" target="_blank" class="social-btn" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-      <a href="#" class="social-btn" title="ORCID"><i class="fab fa-orcid"></i></a>
-      <a href="#" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="mailto:shivambela1@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+    <div class="social-row" style="display:flex; gap:14px;">
+      <a href="https://linkedin.com/in/shiwam-singh-ab1392219" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://scholar.google.co.in/citations?user=D6hiOkkAAAAJ&hl=en" target="_blank" class="social-btn"><i class="fas fa-graduation-cap"></i></a>
+      <a href="#" class="social-btn"><i class="fab fa-researchgate"></i></a>
+      <a href="#" class="social-btn"><i class="fab fa-orcid"></i></a>
+      <a href="mailto:shivambela1@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
     </div>
-    <div class="footer-copy">&copy; 2026 Shiwam Singh &middot; IIT Roorkee &middot; Last updated: March 2026</div>
+    <div class="footer-copy" style="font-family: monospace;">© 2026 Shiwam Singh · IIT Roorkee · Last updated: March 2026</div>
   </footer>
-
 </main>
 
 <script>
-(function(){
-  const sections=document.querySelectorAll('.section');
-  const btns=document.querySelectorAll('.tab-btn');
-  const valid=['education','experience','publications','conferences','awards','workshops','skills'];
-  function activate(id){
-    sections.forEach(s=>s.classList.remove('active'));
-    btns.forEach(b=>b.classList.remove('active'));
-    const sec=document.getElementById('section-'+id);
-    const btn=document.querySelector('.tab-btn[data-section="'+id+'"]');
-    if(sec)sec.classList.add('active');
-    if(btn)btn.classList.add('active');
-  }
-  function fromHash(){const h=window.location.hash.slice(1);activate(valid.includes(h)?h:'education');}
-  btns.forEach(b=>b.addEventListener('click',function(e){e.preventDefault();window.location.hash=this.dataset.section;}));
-  window.addEventListener('hashchange',fromHash);
-  fromHash();
-})();
+  (function(){
+    const sections = document.querySelectorAll('.section');
+    const btns = document.querySelectorAll('.tab-btn');
+    const valid = ['education','experience','publications','conferences','awards','workshops','skills'];
+    function activate(id){
+      sections.forEach(s => s.classList.remove('active'));
+      btns.forEach(b => b.classList.remove('active'));
+      const sec = document.getElementById('section-'+id);
+      const btn = document.querySelector(`.tab-btn[data-section="${id}"]`);
+      if(sec) sec.classList.add('active');
+      if(btn) btn.classList.add('active');
+    }
+    function fromHash(){
+      let hash = window.location.hash.slice(1);
+      if(!valid.includes(hash)) hash = 'education';
+      activate(hash);
+    }
+    btns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const section = btn.dataset.section;
+        window.location.hash = section;
+        activate(section);
+      });
+    });
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
+  })();
 </script>
 </body>
 </html>
